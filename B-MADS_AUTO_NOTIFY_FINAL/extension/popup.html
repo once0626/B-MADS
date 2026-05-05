@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>B-MADS</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <header class="header">
+  <span class="logo">🛡️ B-MADS</span>
+  <span class="subtitle">Malware Analysis Report</span>
+</header>
+
+<section id="verdict" class="verdict suspicious">
+  <div class="verdict-text">Suspicious</div>
+  <div class="verdict-sub">
+    Potentially harmful characteristics detected
+  </div>
+</section>
+
+
+<!-- WHY: ALWAYS VISIBLE -->
+<section class="card always-open">
+  <div class="card-header static">
+    ❓ Why was this flagged?
+  </div>
+  <div class="card-body show">
+    <ul id="reasons"></ul>
+  </div>
+</section>
+
+<!-- TECH DETAILS: DROPDOWN -->
+<section class="card">
+  <div class="card-header toggle" data-target="tech">
+    <span>🧠 Technical Details</span>
+    <span class="arrow">▸</span>
+  </div>
+  <div id="tech" class="card-body">
+    <pre id="techDetails"></pre>
+  </div>
+</section>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
